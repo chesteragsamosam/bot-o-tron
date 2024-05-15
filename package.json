@@ -1,0 +1,36 @@
+{
+  "name": "lichess-node-bot",
+  "version": "1.0.0",
+  "description": "Lichess bot event and game code example",
+  "main": "src/Main.js",
+  "scripts": {
+    "test": "nyc tap test/*",
+    "coverage": "nyc --reporter=lcov tap test/*",
+    "start": "node src/Main.js",
+    "tournament": "node src/tournament/Main.js",
+    "build": "echo 'runs directly with node'",
+    "deps": "npx yarn-check --skip-unused",
+    "markdownlint": "npx markdownlint-cli2 README.md --fix",
+    "prettify": "prettier --write --trailing-comma es5 --no-semi {src,test}/**/*.[jt]s dist/*.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "moxios": "^0.4.0",
+    "nock": "13.5.4",
+    "nyc": "^15.1.0",
+    "sinon": "17.0.1",
+    "tap": "^16.3.8",
+    "tape": "5.7.5"
+  },
+  "dependencies": {
+    "axios": "1.6.8",
+    "chess.js": "^1.0.0-beta.6",
+    "chessground": "^9.0.5",
+    "express": "4.19.2",
+    "ndjson": "^2.0.0",
+    "oboe": "^2.1.5",
+    "prettier": "3.2.5"
+  }
+}
